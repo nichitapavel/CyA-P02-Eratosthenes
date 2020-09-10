@@ -15,24 +15,24 @@ Se señalan a continuación los aspectos más relevantes (la lista no es exhaust
 que se tendrán en cuenta a la hora de evaluar esta práctica:
 
 * El alumnado ha de acreditar que es capaz de editar ficheros remotos en la VM de la asignautra usando VSC
-* Ha de acreditarse que se es capaz de conectarse a la VM de la asignatura y ejecutar comandos
+* Ha de acreditar que es capaz de conectarse a la VM de la asignatura y ejecutar comandos
 básicos de Linux para al menos: copiar, borrar y editar ficheros, crear directorios y compilar su programa.
 * El comportamiento del programa debe ajustarse a lo solicitado en este documento.
 * Capacidad del programador(a) de introducir cambios en el programa desarrollado.
 * Modularidad: el programa ha de escribirse de modo que las diferentes funcionalidades
 que se precisen sean encapsuladas en funciones y/o métodos cuya extensión textual se mantenga acotada.
-* El código ha de estar escrito de acuerdo al estándar de la XXX.
+* El código ha de estar escrito de acuerdo al estándar de la [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html).
 En particular ha de atender a los siguientes aspectos:
     1. Todos los ficheros tendrán comentarios de cabecera.
-    2. El código estará correctamente indentado de acuerdo al estándar definido.
-    3. Todos los identificadores del código se nominarán de modo que sean significativos y de acuerdo al estándar.
+    2. El código estará correctamente indentado de acuerdo a la guía.
+    3. Todos los identificadores del código se nominarán de modo que sean significativos y de acuerdo a lo especificado en la guía.
 * El programa desarrollado deberá compilarse utilizando la herramienta `make` y un fichero `Makefile`.
 
 Si el alumnado tiene dudas respecto a cualquiera de estos aspectos, debiera acudir al
-foro de discusiones de la asignatura para plantearlas allı́. Se espera que, a través de ese
-foro, el alumnado intercambie experiencias y conocimientos, ayudándose mutuamente
-a resolver dichas dudas. También el profesorado de la asignatura intervendrá en las
-discusiones que pudieran suscitarse, si fuera necesario.
+foro de discusiones de la asignatura para plantearlas allı́. 
+Se espera que, a través de ese foro, el alumnado intercambie experiencias y conocimientos, ayudándose mutuamente
+a resolver dichas dudas. 
+También el profesorado de la asignatura intervendrá en las discusiones que pudieran suscitarse, si fuera necesario.
     
 ### Introducción
 La [criba de Eratóstenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) es un antiguo método para hallar números primos. 
@@ -74,10 +74,6 @@ El programa seguirá las siguientes especificaciones:
 * [Ejemplo de un fichero Makefile](https://github.com/fsande/IB-class-code-examples/blob/master/IntroductionToC%2B%2B/Makefile) para compilar el programa hello_world.cc
 * [A Simple Makefile Tutorial](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/) De forma incremental
   explica el funcionamiento de la herramienta `make`
-* []()
-* []()
-
-Makefile
-Lectura de parámetros en línea de comandos
+* [How to parse command line parameters](http://www.cplusplus.com/articles/DEN36Up4/) Explica cómo pasar parámetros a un programa C o C++ desde la línea de comandos.
 
 
