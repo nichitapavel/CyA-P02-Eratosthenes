@@ -75,5 +75,6 @@ El programa seguirá las siguientes especificaciones:
 * [A Simple Makefile Tutorial](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/) De forma incremental
   explica el funcionamiento de la herramienta `make`
 * [How to parse command line parameters](http://www.cplusplus.com/articles/DEN36Up4/) Explica cómo pasar parámetros a un programa C o C++ desde la línea de comandos.
+* [C++ Tutor](http://pythontutor.com/cpp.html#mode=display) Visualización online de la ejecución de código C++
 
 
