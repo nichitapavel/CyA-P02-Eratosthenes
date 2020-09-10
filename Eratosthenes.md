@@ -1,4 +1,4 @@
-# Práctica 02. Tablas Hash
+# Práctica 02. La criba de Eratóstenes
 
 ### Objetivos
 Los objetivos de esta práctica son: 
