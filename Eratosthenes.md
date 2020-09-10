@@ -35,7 +35,7 @@ a resolver dichas dudas. También el profesorado de la asignatura intervendrá e
 discusiones que pudieran suscitarse, si fuera necesario.
     
 ### Introducción
-La criba de Eratóstenes es un antiguo método para hallar números primos. 
+La [criba de Eratóstenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) es un antiguo método para hallar números primos. 
 Se escribe una lista de todos los números naturales. 
 Comenzando por el 2, se tachan de la lista todos los mayores que 2 que están separados 2 posiciones (se tachan así todos los múltiplos de 2). 
 A continuación se localiza el siguiente número en la lista, que es primo, el 3. 
