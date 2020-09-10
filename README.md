@@ -1,13 +1,16 @@
-# PAI Lab assignment (lab, class presentation with slides) structure
+# CyA Lab assignment (lab, class presentation with slides) structure
 
 This directory is organised as follows:
 
-      .
-      ├── coverage   # Code coverage reports files
-      ├── docs       # All kind of project documentation, including JSDoc files
-      ├── image      # Image resources 
-      ├── tests      # Source code for tests
-      ├── src        # Source code, including JS, CSS, HTML
+
+├── docs               # All kind of project documentation
+├── Eratosthenes.md    # The assignment description
+├── img                # Image resources if needed
+├── LICENSE
+├── README.md          # This file
+├── src                # Source code
+└── tests              # Source code for tests, if included
+
 
 For each assignment there should be a markdown file with the assignment description.
 Find that file and follow the instructions on it.
