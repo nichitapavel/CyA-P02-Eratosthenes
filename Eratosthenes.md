@@ -22,10 +22,13 @@ básicos de Linux para al menos: copiar, borrar y editar ficheros, crear directo
 * Modularidad: el programa ha de escribirse de modo que las diferentes funcionalidades
 que se precisen sean encapsuladas en funciones y/o métodos cuya extensión textual se mantenga acotada.
 * El código ha de estar escrito de acuerdo al estándar de la [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html).
-En particular ha de atender a los siguientes aspectos:
-    1. Todos los ficheros tendrán comentarios de cabecera.
-    2. El código estará correctamente indentado de acuerdo a la guía.
-    3. Todos los identificadores del código se nominarán de modo que sean significativos y de acuerdo a lo especificado en la guía.
+Preste particular atención a los siguientes aspectos:
+    1. [Reglas](https://google.github.io/styleguide/cppguide.html#Naming) de nombrado de ficheros, clases, variables, constantes, etc. 
+       Todos los identificadores del código se nominarán de modo que sean significativos y de acuerdo a lo especificado en la guía.
+    2. Reglas de [formato de escritura](https://google.github.io/styleguide/cppguide.html#Formatting) del código: espacios, tabuladores, posición de paréntesis, corchetes, llaves, etc.
+    3. [Documentación del código](https://google.github.io/styleguide/cppguide.html#Comments)
+    4. Todos los ficheros tendrán comentarios de cabecera.
+    5. El código estará correctamente indentado de acuerdo a los criterios expuestos en la guía.
 * El programa desarrollado deberá compilarse utilizando la herramienta `make` y un fichero `Makefile`.
 
 Si el alumnado tiene dudas respecto a cualquiera de estos aspectos, debiera acudir al
