@@ -47,6 +47,37 @@ Se localiza el siguiente número, que es primo, el 5...
 
 Siguiendo este proceso se obtiene una lista en la que los únicos números no tachados son los primos.
 
+### Entorno de trabajo
+En las salas del CC de la ESIT ya se encuentra instalado el Visual Studio Code (VSC) pero también es 
+imprescindible que lo instale Ud. en su ordenador de trabajo habitual.
+Si trabaja Ud. en GNU/Linux (como se recomienda) siga las instrucciones correspondientes a
+["Debian and Ubuntu based distributions"](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions) para instalar VSC.
+
+Siga a continuación 
+[estas instrucciones](https://code.visualstudio.com/docs/cpp/config-linux)
+para instalar/configurar en su ordenador de trabajo (en las salas del Centro de Cálculo debería estar instalada) la extensión para trabajar con C/C++ en VSC.
+* Compruebe que el compilador gcc/g++ esté instalado en su máquina Virtual (VM) de la asignatura.
+* Instale (si no lo está) el depurador gdb en la VM.
+* Y siga el resto de ese tutorial para crear en VSC su primer proyecto `helloworld.cc`
+* En particular debe Ud. estudiar la
+[User Interface documentation](https://code.visualstudio.com/docs/getstarted/userinterface)
+para conocer los detalles de la interfaz de VSC y ser capaz de manejarse con la misma.
+Tal como indica el tutorial, cree el fichero de texto `tasks.json` que gestiona la compilación de sus proyectos C++.
+Asegúrese de que en ese fichero el compilador que utiliza es `/usr/bin/g++`.
+Siga también las instrucciones de ese tutorial para crear el fichero `launch.json` que controla la depuración del código fuente desde el entorno integrado del VSC usando como depurador el gdb.
+Comience los primeros pasos de la depuración del programa `hello_world.cc` usando el VSC.
+
+Recuerde que además de gestionar sus proyectos de programación usando VSC siempre puede utilizar la línea de comandos para compilar
+sus programas C++, invocando directamente al compilador g++.
+
+En el caso particular de esta práctica puede Ud. compilar su programa accediendo a su VM, y en el directorio
+de trabajo invocando al compilador:
+
+`$ g++ -std=c++14 -g -Wall -o erathostenes erathostenes.cc`
+
+Puede Ud. usar esta alternativa (compilación desde la línea de comandos) pero el propósito en la asignatura
+es que los proyectos de programación (prácticas) se gestionen enteramente usando el VSC.
+
 ### Ejercicio práctico
 Diseñar un programa en C++ (`erathostenes.cc`) que imprima en pantalla una lista de números primos.
 El programa se invocará (por ejemplo) como:
