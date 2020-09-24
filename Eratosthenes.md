@@ -80,7 +80,7 @@ Siga a continuación
 para instalar/configurar en su ordenador de trabajo (en las salas del Centro de Cálculo debería estar instalada) la extensión para trabajar con C/C++ en VSC.
 * Compruebe que el compilador gcc/g++ esté instalado en su máquina Virtual (VM) de la asignatura.
 * Instale (si no lo está) el depurador gdb en la VM.
-* Y siga el resto de ese tutorial para crear en VSC su primer proyecto `helloworld.cc`
+* Y siga el resto de ese tutorial para crear en VSC su primer proyecto `hello_world.cc`
 * En particular debe Ud. estudiar la
 [User Interface documentation](https://code.visualstudio.com/docs/getstarted/userinterface)
 para conocer los detalles de la interfaz de VSC y ser capaz de manejarse con la misma.
