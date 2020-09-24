@@ -47,6 +47,28 @@ Se localiza el siguiente número, que es primo, el 5...
 
 Siguiendo este proceso se obtiene una lista en la que los únicos números no tachados son los primos.
 
+### Ejercicio práctico
+Diseñar un programa en C++ (`erathostenes.cc`) que imprima en pantalla una lista de números primos.
+El programa se invocará (por ejemplo) como:
+
+`./erathostenes 1000`
+
+En este caso particular el programa imprimirá en pantalla todos los números primos menores o iguales que 1000.
+
+El programa seguirá las siguientes especificaciones:
+
+* El programa leerá por línea de comandos un número natural `N` que será el número de valores que inicialmente
+  contendrá la lista (1000 en el ejemplo anterior).
+* Utilizará alguna estructura de datos para almacenar los `N` valores `[1..N]` iniciales en orden ascendente. 
+  Todos estos números son considerados inicialmente primos.
+* La función `Sieve` operará sobre la lista de valores e irá marcando en ella como no primos los múltiplos de
+  2, los de 3, los de 5, etc. 
+	Para ello localizará un valor que sea primo e invocará la función `Remove` que marcará desde ese punto de
+	la lista en adelante todos los valores múltiplos del elegido, como no primos.
+* Utilice una función adicional para eliminar de la lista todos los números que que no sean primos.
+* Desarolle también una función que permita imprimir en pantalla en cualquier momento el estado de la lista. 
+  Esta función escribirá cada uno de los valores presentes en la lista indicando si es primo o no.
+
 ### Entorno de trabajo
 En las salas del CC de la ESIT ya se encuentra instalado el Visual Studio Code (VSC) pero también es 
 imprescindible que lo instale Ud. en su ordenador de trabajo habitual.
@@ -78,28 +100,21 @@ de trabajo invocando al compilador:
 Puede Ud. usar esta alternativa (compilación desde la línea de comandos) pero el propósito en la asignatura
 es que los proyectos de programación (prácticas) se gestionen enteramente usando el VSC.
 
-### Ejercicio práctico
-Diseñar un programa en C++ (`erathostenes.cc`) que imprima en pantalla una lista de números primos.
-El programa se invocará (por ejemplo) como:
+Estudie algún tutorial ([este podría ser un ejemplo](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/)) para aprender a utilizar
+la herramienta `make` y ficheros `Makefile`.
+Revise igualmente la documentación oficial correspondiente a [GNU Make](https://www.gnu.org/software/make/).
 
-`./erathostenes 1000`
+Su proyecto de programación debe contener un fichero `Makefile` de modo que al ejecutar
 
-En este caso particular el programa imprimirá en pantalla todos los números primos menores o iguales que 1000.
+`$ make`
 
-El programa seguirá las siguientes especificaciones:
+se produzca la compilación del programa y se genere el fichero ejecutable `erathostenes`, mientras que
+ejecutando
 
-* El programa leerá por línea de comandos un número natural `N` que será el número de valores que inicialmente
-  contendrá la lista (1000 en el ejemplo anterior).
-* Utilizará alguna estructura de datos para almacenar los `N` valores `[1..N]` iniciales en orden ascendente. 
-  Todos estos números son considerados inicialmente primos.
-* La función `Sieve` operará sobre la lista de valores e irá marcando en ella como no primos los múltiplos de
-  2, los de 3, los de 5, etc. 
-	Para ello localizará un valor que sea primo e invocará la función `Remove` que marcará desde ese punto de
-	la lista en adelante todos los valores múltiplos del elegido, como no primos.
-* Utilice una función adicional para eliminar de la lista todos los números que que no sean primos.
-* Desarolle también una función que permita imprimir en pantalla en cualquier momento el estado de la lista. 
-  Esta función escribirá cada uno de los valores presentes en la lista indicando si es primo o no.
+`$ make clean`
 
+se borren todos los ficheros del directorio de trabajo salvo los que contengan código fuente
+(`erathostenes.*`) y el propio `Makefile`.
 
 ### Referencias
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) La guía de estilo de código que
@@ -110,5 +125,3 @@ El programa seguirá las siguientes especificaciones:
   explica el funcionamiento de la herramienta `make`
 * [How to parse command line parameters](http://www.cplusplus.com/articles/DEN36Up4/) Explica cómo pasar parámetros a un programa C o C++ desde la línea de comandos.
 * [C++ Tutor](http://pythontutor.com/cpp.html#mode=display) Visualización online de la ejecución de código C++
-
-
