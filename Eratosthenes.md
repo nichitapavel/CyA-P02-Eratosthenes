@@ -89,16 +89,19 @@ Asegúrese de que en ese fichero el compilador que utiliza es `/usr/bin/g++`.
 Siga también las instrucciones de ese tutorial para crear el fichero `launch.json` que controla la depuración del código fuente desde el entorno integrado del VSC usando como depurador el gdb.
 Comience los primeros pasos de la depuración del programa `hello_world.cc` usando el VSC.
 
-Recuerde que además de gestionar sus proyectos de programación usando VSC siempre puede utilizar la línea de comandos para compilar
+Si no lo hizo en la práctica anterior, siga 
+[estas instrucciones](https://code.visualstudio.com/docs/remote/ssh)
+para configurar la edición remota de ficheros alojados en su máquina virtual.
+De ese modo podrá editar todos los ficheros de su proyecto en la VM usando VSC.
+
+En prácticas futuras se estudiará cómo gestionar enteramente sus proyectos C++ usando VSC pero por ahora se propone el uso de la línea de comandos
+(ya sea mediante una conexión ssh con la VM o usando la pestaña "Terminal" del VSC) para compilar
 sus programas C++, invocando directamente al compilador g++.
 
 En el caso particular de esta práctica puede Ud. compilar su programa accediendo a su VM, y en el directorio
 de trabajo invocando al compilador:
 
 `$ g++ -std=c++14 -g -Wall -o erathostenes erathostenes.cc`
-
-Puede Ud. usar esta alternativa (compilación desde la línea de comandos) pero el propósito en la asignatura
-es que los proyectos de programación (prácticas) se gestionen enteramente usando el VSC.
 
 Estudie algún tutorial ([este podría ser un ejemplo](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/)) para aprender a utilizar
 la herramienta `make` y ficheros `Makefile`.
