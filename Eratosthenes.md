@@ -122,6 +122,7 @@ se borren todos los ficheros del directorio de trabajo salvo los que contengan c
 * [GNU Make](https://www.gnu.org/software/make/)
 * [Ejemplo de un fichero Makefile](https://github.com/fsande/IB-class-code-examples/blob/master/IntroductionToC%2B%2B/Makefile) para compilar el programa hello_world.cc
 * [A Simple Makefile Tutorial](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/) De forma incremental
-  explica el funcionamiento de la herramienta `make`
+  explica el funcionamiento de la herramienta `make`. Utiliza el compilador de C en lugar de `g++`, pero es
+	obvio cómo adaptar los ejemplos al caso de C++.
 * [How to parse command line parameters](http://www.cplusplus.com/articles/DEN36Up4/) Explica cómo pasar parámetros a un programa C o C++ desde la línea de comandos.
 * [C++ Tutor](http://pythontutor.com/cpp.html#mode=display) Visualización online de la ejecución de código C++
