@@ -71,61 +71,31 @@ El programa seguirá las siguientes especificaciones:
 
 ### Entorno de trabajo
 En las salas del CC de la ESIT ya se encuentra instalado el Visual Studio Code (VSC) pero también es 
-imprescindible que lo instale Ud. en su ordenador de trabajo habitual.
+imprescindible que lo tenga Ud. en su ordenador de trabajo habitual.
 Si trabaja Ud. en GNU/Linux (como se recomienda) siga las instrucciones correspondientes a
 ["Debian and Ubuntu based distributions"](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions) para instalar VSC.
 
 Siga a continuación 
 [estas instrucciones](https://code.visualstudio.com/docs/cpp/config-linux)
-para instalar/configurar en su ordenador de trabajo (en las salas del Centro de Cálculo debería estar instalada) la extensión para trabajar con C/C++ en VSC.
+para instalar/configurar en su ordenador de trabajo (tenga en cuenta que en las salas del Centro de Cálculo esta instalación es local a cada usuario) la extensión para trabajar con C/C++ en VSC.
 * Compruebe que el compilador gcc/g++ esté instalado en su máquina Virtual (VM) de la asignatura.
-* Instale (si no lo está) el depurador gdb en la VM.
-* Y siga el resto de ese tutorial para crear en VSC su primer proyecto `hello_world.cc`
-* En particular debe Ud. estudiar la
+* Estudie la
 [User Interface documentation](https://code.visualstudio.com/docs/getstarted/userinterface)
 para conocer los detalles de la interfaz de VSC y ser capaz de manejarse con la misma.
-Tal como indica el tutorial, cree el fichero de texto `tasks.json` que gestiona la compilación de sus proyectos C++.
-Asegúrese de que en ese fichero el compilador que utiliza es `/usr/bin/g++`.
-Siga también las instrucciones de ese tutorial para crear el fichero `launch.json` que controla la depuración del código fuente desde el entorno integrado del VSC usando como depurador el gdb.
-Comience los primeros pasos de la depuración del programa `hello_world.cc` usando el VSC.
 
 Si no lo hizo en la práctica anterior, siga 
 [estas instrucciones](https://code.visualstudio.com/docs/remote/ssh)
 para configurar la edición remota de ficheros alojados en su máquina virtual.
 De ese modo podrá editar todos los ficheros de su proyecto en la VM usando VSC.
 
-En prácticas futuras se estudiará cómo gestionar enteramente sus proyectos C++ usando VSC pero por ahora se propone el uso de la línea de comandos
-(ya sea mediante una conexión ssh con la VM o usando la pestaña "Terminal" del VSC) para compilar
-sus programas C++, invocando directamente al compilador g++.
-
-En el caso particular de esta práctica puede Ud. compilar su programa accediendo a su VM, y en el directorio
-de trabajo invocando al compilador:
+Para compilar su programa, acceda a su VM, y en el directorio de trabajo invoque al compilador:
 
 `$ g++ -std=c++14 -g -Wall -o erathostenes erathostenes.cc`
 
-Estudie algún tutorial ([este podría ser un ejemplo](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/)) para aprender a utilizar
-la herramienta `make` y ficheros `Makefile`.
-Revise igualmente la documentación oficial correspondiente a [GNU Make](https://www.gnu.org/software/make/).
-
-Su proyecto de programación debe contener un fichero `Makefile` de modo que al ejecutar
-
-`$ make`
-
-se produzca la compilación del programa y se genere el fichero ejecutable `erathostenes`, mientras que
-ejecutando
-
-`$ make clean`
-
-se borren todos los ficheros del directorio de trabajo salvo los que contengan código fuente
-(`erathostenes.*`) y el propio `Makefile`.
+Esta compilación la puede realizar estableciendo una conexión ssh con la VM en una terminal independiente o utilizando la pestaña `Terminal` de VSC.
 
 ### Referencias
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) La guía de estilo de código que
   se usará en la asignatura
-* [GNU Make](https://www.gnu.org/software/make/)
-* [Ejemplo de un fichero Makefile](https://github.com/fsande/IB-class-code-examples/blob/master/IntroductionToC%2B%2B/Makefile) para compilar el programa hello_world.cc
-* [A Simple Makefile Tutorial](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/) De forma incremental
-  explica el funcionamiento de la herramienta `make`. Utiliza el compilador de C en lugar de `g++`, pero es
-	obvio cómo adaptar los ejemplos al caso de C++.
 * [How to parse command line parameters](http://www.cplusplus.com/articles/DEN36Up4/) Explica cómo pasar parámetros a un programa C o C++ desde la línea de comandos.
 * [C++ Tutor](http://pythontutor.com/cpp.html#mode=display) Visualización online de la ejecución de código C++
