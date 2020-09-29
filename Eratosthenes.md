@@ -4,11 +4,11 @@
 Los objetivos de esta práctica son: 
 
 * Ser capaz de desarrollar, compilar y ejecutar programas escritos en C++ en el entorno de trabajo IaaS
+* Ser capaz de usar comandos de la shell de GNU/Linux para trabajar en la Máquina Virtual de la asignatura
+* Introducir las reglas de estilo de código a utilizar en las prácticas de la asignatura
 * Profundizar en los conocimientos de Visual Studio Code (VSC)
 * Ser capaz de editar ficheros de forma remota usando VSC
 * Practicar conocimientos de programación en C++
-* Introducir las reglas de estilo de código a utilizar en las prácticas de la asignatura
-* Que el alumnado aprenda a utilizar la utilidad make para el desarrollo de programas simples
 
 ### Rúbrica de evaluacion de esta práctica
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
