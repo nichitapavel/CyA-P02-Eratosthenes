@@ -3,7 +3,8 @@
 ### Objetivos
 Los objetivos de esta práctica son: 
 
-* Ser capaz de desarrollar, compilar y ejecutar programas escritos en C++ en el entorno de trabajo IaaS
+
+* Ser capaz de desarrollar, editar remotamente usando VSC, compilar y ejecutar programas escritos en C++ en su VM
 * Ser capaz de usar comandos de la shell de GNU/Linux para trabajar en la Máquina Virtual de la asignatura
 * Introducir las reglas de estilo de código a utilizar en las prácticas de la asignatura
 * Profundizar en los conocimientos de Visual Studio Code (VSC)
@@ -14,9 +15,10 @@ Los objetivos de esta práctica son:
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
 que se tendrán en cuenta a la hora de evaluar esta práctica:
 
-* El alumnado ha de acreditar que es capaz de editar ficheros remotos en la VM de la asignautra usando VSC
 * Ha de acreditar que es capaz de conectarse a la VM de la asignatura y ejecutar comandos
 básicos de Linux para al menos: copiar, borrar y editar ficheros, crear directorios y compilar su programa.
+* Ser capaz de desarrollar, editar remotamente usando VSC, compilar y ejecutar programas escritos en C++ en su VM
+* El alumnado ha de acreditar que es capaz de editar ficheros remotos en la VM de la asignautra usando VSC
 * El comportamiento del programa debe ajustarse a lo solicitado en este documento.
 * Capacidad del programador(a) de introducir cambios en el programa desarrollado.
 * Modularidad: el programa ha de escribirse de modo que las diferentes funcionalidades
@@ -29,7 +31,6 @@ Preste particular atención a los siguientes aspectos:
     3. [Documentación del código](https://google.github.io/styleguide/cppguide.html#Comments)
     4. Todos los ficheros tendrán comentarios de cabecera.
     5. El código estará correctamente indentado de acuerdo a los criterios expuestos en la guía.
-* El programa desarrollado deberá compilarse utilizando la herramienta `make` y un fichero `Makefile`.
 
 Si el alumnado tiene dudas respecto a cualquiera de estos aspectos, debiera acudir al
 foro de discusiones de la asignatura para plantearlas allı́. 
