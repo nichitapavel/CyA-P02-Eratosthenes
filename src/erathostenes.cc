@@ -40,7 +40,7 @@ class NumberAndStatus {
  public:
   NumberAndStatus() {
     number = 0;
-    primeness = false;
+    primeness = true;
   }
 
   explicit NumberAndStatus(int number) {
@@ -65,7 +65,11 @@ class NumberAndStatus {
   }
 
   void toString(void) {
-    std::cout << number << " " << primeness << std::endl;
+    std::string prime_status = primeness ? "Prime" : "NOT Prime";
+    std::cout << number
+              << " "
+              << prime_status
+              << std::endl;
   }
 };
 
@@ -73,6 +77,7 @@ class Numbers {
  private:
   std::vector<NumberAndStatus> numbers;
   int length;
+  int currentPrimePosition;
 
  public:
   explicit Numbers(int length) {
@@ -84,11 +89,24 @@ class Numbers {
       item.setNumber(position + drift);
       position++;
     }
+    this->currentPrimePosition = -1;
   }
 
   ~Numbers() {
     length = 0;
+    currentPrimePosition = 0;
     numbers.clear();
+  }
+
+  int getNextPrime() {
+    for (int i = currentPrimePosition + 1; i < length; i++) {
+      NumberAndStatus number = numbers[i];
+      if (number.isPrime()) {
+        currentPrimePosition = i;
+        return number.getNumber();
+      }
+    }
+    return -1;
   }
 
   // std::ostream & operator<< (std::ostream &out, Token const &t)
@@ -102,24 +120,23 @@ class Numbers {
   bool sieve(int number_to_sieve) {
     int position = getPositionOfNumber(number_to_sieve);
     if (position == -1) {
-      std::cout << "Sieve cannot be done with number: "
-                << number_to_sieve
-                << std::endl;
       return false;
     }
     for (int i = position + number_to_sieve; i < length; i += number_to_sieve) {
-      numbers[i].setPrimeness(true);
+      numbers[i].setPrimeness(false);
     }
     return true;
   }
 
   int getPositionOfNumber(int number) {
-    int position = 0;
-    for (auto& item : numbers) {
-      if (item.getNumber() == number) {
-        return position;
+    // TODO(pavelnichita) a risky way to get position
+    // it can be called independently of
+    // getNextPrime() method
+    int i = currentPrimePosition;
+    for (; i < length; i++) {
+      if (numbers[i].getNumber() == number) {
+        return i;
       }
-      position += 1;
     }
     return -1;
   }
@@ -128,13 +145,20 @@ class Numbers {
     int size = numbers.size();
     int i = 0;
     while (i < size) {
-      if (numbers[i].isPrime()) {
+      if (!numbers[i].isPrime()) {
         numbers.erase(numbers.begin() + i);
         i--;
-        size = numbers.size();
+        size--;
       }
       i++;
     }
+    length = numbers.size();
+    currentPrimePosition = 0;
+  }
+
+  int last_number() {
+    NumberAndStatus last_number = numbers.back();
+    return last_number.getNumber();
   }
 };
 
@@ -159,15 +183,13 @@ int main(int argc, char *argv[]) {
   }
 
   Numbers numbers = Numbers(calculate_prime_up_to);
-  numbers.sieve(2);
-  numbers.sieve(3);
-  numbers.sieve(4);
-  numbers.sieve(5);
-  numbers.sieve(6);
-  numbers.sieve(7);
-  numbers.toString();
+  int prime_number = 0;
+  do {
+    prime_number = numbers.getNextPrime();
+    numbers.sieve(prime_number);
+  } while ( prime_number != -1);
   numbers.remove();
-  // numbers.
-  /* Other code omitted */
+  numbers.toString();
+
   exit(EXIT_SUCCESS);
 }
