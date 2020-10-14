@@ -61,12 +61,16 @@ class NumberAndStatus {
     this->primeness_ = primeness;
   }
 
-  void toString(void) {
-    std::string prime_status = primeness_ ? "Prime" : "NOT Prime";
-    std::cout << number_
-              << " "
-              << prime_status
-              << std::endl;
+  friend std::ostream& operator << (std::ostream& co,
+                                    const NumberAndStatus &number_and_status) {
+    std::string prime_status;
+    if (number_and_status.primeness_) {
+      prime_status = "Prime";
+    } else {
+      prime_status = "NOT Prime";
+    }
+    co << number_and_status.number_ << " " << prime_status << " ";
+    return co;
   }
 };
 
@@ -107,11 +111,11 @@ class Numbers {
   }
 
   // std::ostream & operator<< (std::ostream &out, Token const &t)
-  void toString(void) {
-    for (auto& foo : numbers) {
-      foo.toString();
+  friend std::ostream& operator << (std::ostream &co, const Numbers &numbers) {
+    for (const auto& foo : numbers.numbers) {
+      co << foo << "\n";
     }
-    std::cout << std::endl;
+    return co;
   }
 
   bool sieve(int number_to_sieve) {
