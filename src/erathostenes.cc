@@ -184,10 +184,16 @@ int main(int argc, char *argv[]) {
 
   Numbers numbers = Numbers(calculate_prime_up_to);
   int prime_number = 0;
+  // Stop condition: prime_number * prime_number > n
+  // for n = 40
+  // 2 * 2 = 4 < 40
+  // 3 * 3 = 9 < 40
+  // 5 * 5 = 25 < 40
+  // 7 * 7 = 49 > 40 STOP
   do {
     prime_number = numbers.getNextPrime();
     numbers.sieve(prime_number);
-  } while ( prime_number != -1);
+  } while ( prime_number * prime_number < calculate_prime_up_to);
   numbers.remove();
   numbers.toString();
 
