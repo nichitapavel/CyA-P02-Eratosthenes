@@ -34,39 +34,39 @@
 
 class NumberAndStatus {
  private:
-  int number;
-  bool primeness;
+  int number_;
+  bool primeness_;
 
  public:
   NumberAndStatus() {
-    number = 0;
-    primeness = true;
+    number_ = 0;
+    primeness_ = true;
   }
 
   explicit NumberAndStatus(int number) {
-    this->number = number;
-    this->primeness = false;
+    this->number_ = number;
+    this->primeness_ = false;
   }
 
   int getNumber(void) {
-    return number;
+    return number_;
   }
 
   bool isPrime(void) {
-    return primeness;
+    return primeness_;
   }
 
   void setNumber(int number) {
-    this->number = number;
+    this->number_ = number;
   }
 
   void setPrimeness(bool primeness) {
-    this->primeness = primeness;
+    this->primeness_ = primeness;
   }
 
   void toString(void) {
-    std::string prime_status = primeness ? "Prime" : "NOT Prime";
-    std::cout << number
+    std::string prime_status = primeness_ ? "Prime" : "NOT Prime";
+    std::cout << number_
               << " "
               << prime_status
               << std::endl;
