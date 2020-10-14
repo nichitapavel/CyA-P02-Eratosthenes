@@ -25,9 +25,6 @@
  * @brief  Executable for Sieve of Eratosthenes.
  */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <iostream>
 #include <vector>
 
