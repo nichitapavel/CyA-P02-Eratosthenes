@@ -196,7 +196,7 @@ int main(int argc, char *argv[]) {
     numbers.sieve(prime_number);
   } while ( prime_number * prime_number < calculate_prime_up_to);
   numbers.remove();
-  numbers.toString();
+  std::cout << numbers;
 
   exit(EXIT_SUCCESS);
 }
