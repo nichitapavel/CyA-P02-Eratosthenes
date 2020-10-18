@@ -538,7 +538,9 @@ qrc_*.cpp
 ui_*.h
 *.qmlc
 *.jsc
-Makefile*
+# Maybe is better to rely in specific tools to generate Makefile
+# but for now I'll allow it
+# Makefile*
 *build-*
 *.qm
 *.prl
@@ -948,7 +950,9 @@ CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
-Makefile
+# Maybe is better to rely in specific tools to generate Makefile
+# but for now I'll allow it
+# Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
