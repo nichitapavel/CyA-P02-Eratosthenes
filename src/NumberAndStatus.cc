@@ -26,37 +26,43 @@
  *         basically if it's prime or not.
  */
 
-#include <iostream>
-
-#ifndef SRC_NUMBERANDSTATUS_H_
-#define SRC_NUMBERANDSTATUS_H_
-
+#include <string>
 #include "NumberAndStatus.h"
 
-#endif  // SRC_NUMBERANDSTATUS_H_
+NumberAndStatus::NumberAndStatus() {
+  number_ = 0;
+  primeness_ = true;
+}
 
 NumberAndStatus::NumberAndStatus(int number) {
-  number = number;
-  primeness = false;
+  this->number_ = number;
+  this->primeness_ = false;
 }
 
-
-int NumberAndStatus::getNumber() {
-  return number;
+int NumberAndStatus::getNumber(void) {
+  return number_;
 }
 
-bool NumberAndStatus::isPrime() {
-  return primeness;
+bool NumberAndStatus::isPrime(void) {
+  return primeness_;
 }
 
 void NumberAndStatus::setNumber(int number) {
-  number = number;
+  this->number_ = number;
 }
 
 void NumberAndStatus::setPrimeness(bool primeness) {
-  primeness = primeness;
+  this->primeness_ = primeness;
 }
 
-void NumberAndStatus::toString() {
-  std::cout << number << " " << primeness << std::endl;
+std::ostream& operator << (std::ostream& co,
+                           const NumberAndStatus &number_and_status) {
+  std::string prime_status;
+  if (number_and_status.primeness_) {
+    prime_status = "Prime";
+  } else {
+    prime_status = "NOT Prime";
+  }
+  co << number_and_status.number_ << " " << prime_status << " ";
+  return co;
 }

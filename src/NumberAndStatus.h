@@ -28,5 +28,23 @@
 
 #ifndef SRC_NUMBERANDSTATUS_H_
 #define SRC_NUMBERANDSTATUS_H_
-#endif  // SRC_NUMBERANDSTATUS_H_
 
+#include <ostream>
+
+class NumberAndStatus {
+ private:
+  int number_;
+  bool primeness_;
+
+ public:
+  NumberAndStatus();
+  explicit NumberAndStatus(int number);
+  int getNumber(void);
+  bool isPrime(void);
+  void setNumber(int number);
+  void setPrimeness(bool primeness);
+  friend std::ostream& operator << (std::ostream& co,
+                                    const NumberAndStatus &number_and_status);
+};
+
+#endif  // SRC_NUMBERANDSTATUS_H_

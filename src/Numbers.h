@@ -22,43 +22,32 @@
  *
  * @author Pavel Nichita
  * @date 12 Oct 2020
- * @brief  Class that manages a list of numbers, applying Sieve of Eratosthenes
- * to find primer numbers.
+ * @brief  Class defining a tuple of a integer number and it's primeness status,
+ *         basically if it's prime or not.
  */
 
-#include <stdio.h>
+#ifndef SRC_NUMBERS_H_
+#define SRC_NUMBERS_H_
+
 #include <vector>
-#include <iostream>
 #include "NumberAndStatus.h"
-
-#ifndef SRC_PRIMES_H_
-#define SRC_PRIMES_H_
-
-/**
- * La función `Sieve` operará sobre la lista de valores e irá marcando en ella como no primos los múltiplos de
- * 2, los de 3, los de 5, etc. 
- * 
- * Para ello localizará un valor que sea primo e invocará la función `Remove` que marcará desde ese punto de
- * la lista en adelante todos los valores múltiplos del elegido, como no primos.
- * 
- * Utilice una función adicional para eliminar de la lista todos los números que que no sean primos.
- * Desarolle también una función que permita imprimir en pantalla en cualquier momento el estado de la lista. 
- * Esta función escribirá cada uno de los valores presentes en la lista indicando si es primo o no.
- * 
- */  
 
 class Numbers {
  private:
   std::vector<NumberAndStatus> numbers;
   int length;
+  int currentPrimePosition;
 
  public:
   explicit Numbers(int length);
   ~Numbers();
-
+  int getNextPrime();
+  bool sieve(int number_to_sieve);
+  int getPositionOfNumber(int number);
+  void remove();
+  int last_number();
   // std::ostream & operator<< (std::ostream &out, Token const &t)
-  void print();
-  void sieve(int);
-  int getPositionOfFirstPrime();
+  friend std::ostream& operator << (std::ostream &co, const Numbers &numbers);
 };
-#endif  // SRC_PRIMES_H_
+
+#endif  // SRC_NUMBERS_H_
